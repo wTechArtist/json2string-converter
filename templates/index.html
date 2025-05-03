@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON转字符串工具</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>JSON转字符串工具</h1>
+    </header>
+    
+    <main>
+        <div class="container">
+            <div class="input-section">
+                <h2>输入JSON</h2>
+                <textarea id="jsonInput" placeholder="在此粘贴您的JSON..." spellcheck="false"></textarea>
+                <div class="buttons">
+                    <button id="convertBtn">转换</button>
+                    <button id="clearBtn">清除</button>
+                    <button id="sampleBtn">示例</button>
+                </div>
+            </div>
+            
+            <div class="output-section">
+                <h2>转换结果</h2>
+                <textarea id="stringOutput" readonly spellcheck="false"></textarea>
+                <div class="buttons">
+                    <button id="copyBtn">复制结果</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>由 <a href="https://github.com/wTechArtist/json2string-converter" target="_blank">wTechArtist</a> 提供 &copy; 2025</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
