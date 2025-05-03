@@ -19,7 +19,7 @@
 
 ## 在线体验
 
-访问 [https://wtechartist.github.io/json2string-converter](https://wtechartist.github.io/json2string-converter) 立即使用此工具。
+访问 [https://wtechartist.github.io/json2string-converter](https://wtechartist.github.io/json2string-converter) 立即使用此工具
 
 ## 本地运行
 
