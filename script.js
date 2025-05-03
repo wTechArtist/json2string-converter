@@ -21,7 +21,10 @@ document.addEventListener('DOMContentLoaded', function() {
             const jsonObject = JSON.parse(jsonText);
             
             // 将JSON对象压缩并转换为字符串
-            const compressedJsonString = JSON.stringify(jsonObject, null, 0);
+            let compressedJsonString = JSON.stringify(jsonObject, null, 0);
+            
+            // 对双引号进行转义，使其成为带转义的字符串
+            compressedJsonString = compressedJsonString.replace(/"/g, '\\"');
             
             // 显示结果
             stringOutput.value = compressedJsonString;
@@ -53,21 +56,16 @@ document.addEventListener('DOMContentLoaded', function() {
     // 加载示例JSON
     function loadSample() {
         jsonInput.value = `{
-  "name": "JSON转字符串示例",
-  "version": 1.0,
-  "features": [
-    "JSON压缩",
-    "字符串转换",
-    "格式化输出"
-  ],
-  "settings": {
-    "compressOutput": true,
-    "ignoreWhitespace": true,
-    "supportChinese": true
-  },
-  "author": {
-    "name": "wTechArtist",
-    "website": "https://github.com/wTechArtist"
+  "6": {
+    "inputs": {
+      "width": 1024,
+      "height": 1536,
+      "batch_size": 1
+    },
+    "class_type": "EmptyLatentImage",
+    "_meta": {
+      "title": "空潜空间图像"
+    }
   }
 }`;
         
